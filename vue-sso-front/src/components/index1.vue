@@ -2,7 +2,7 @@
     <div id="index1">
       <h1>这是系统1的主页</h1>
       <h3>{{message}}</h3><br/>
-      <a href="#">进入系统2的主页</a>
+      <router-link to="/index2"><a href="#">进入系统2的主页</a></router-link>
 
     </div>
 </template>

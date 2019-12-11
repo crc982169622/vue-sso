@@ -48,6 +48,24 @@ Vue.prototype.getUrlKey=function(name) {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [, ""])[1].replace(/\+/g, '%20')) || null
 };
 
+// http response 拦截器
+axios.interceptors.response.use(
+  response => {
+    return response;
+  },
+  error => {
+    if (error.response) {
+      if (error.response.status == 401) {
+        router.replace({
+          path: '/',
+          query: {redirect: router.currentRoute.fullPath}
+        })
+      }
+    }
+    return Promise.reject(error.response.data)  // 返回接口返回的错误信息
+  }
+);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

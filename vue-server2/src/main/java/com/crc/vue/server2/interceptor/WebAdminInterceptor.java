@@ -1,13 +1,10 @@
-package com.crc.vue.server1.interceptor;
+package com.crc.vue.server2.interceptor;
 
-import com.crc.vue.server1.service.RedisCacheService;
-import com.crc.vue.sso.common.domain.User;
-import com.crc.vue.sso.common.util.CookieUtils;
-import com.crc.vue.sso.common.util.MapperUtils;
-import com.crc.vue.sso.common.util.StringUtils;
+import com.crc.vue.server2.service.RedisCacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

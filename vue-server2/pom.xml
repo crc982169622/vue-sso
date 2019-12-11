@@ -8,10 +8,10 @@
         <version>2.2.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.crc.vue.server1</groupId>
-    <artifactId>vue-server1</artifactId>
+    <groupId>com.crc.vue.server2</groupId>
+    <artifactId>vue-server2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>vue-server1</name>
+    <name>vue-server2</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -30,7 +30,7 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>2.2.0.RELEASE</version>
         </dependency>
-
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
