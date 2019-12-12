@@ -42,8 +42,8 @@
                   .post('/sso/login', qs.stringify(this.user))
                   .then(response => {
                     if (response.data.stateInfo == 'success') {
-                      this.setCookie("token", response.data.message)
-                      this.$router.push({path: '/index1'})
+                      this.setCookie("token", response.data.message, 1)
+                      this.$router.push({path: this.$route.query.redirect})
                     } else {
                       this.$Message.error(response.data.message);
                     }

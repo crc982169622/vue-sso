@@ -12,10 +12,9 @@ Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 //设置cookie
 Vue.prototype.setCookie = function(c_name,value,expiredays) {
-  var exdate=new Date()
-  exdate.setDate(exdate.getDate()+expiredays)
-  document.cookie=c_name+ "=" +escape(value)+
-    ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+  var exdate = new Date();
+  exdate.setDate(exdate.getDate() + expiredays);
+  document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString());
 };
 
 //获取cookie
@@ -38,7 +37,7 @@ Vue.prototype.getCookie=function(c_name) {
 Vue.prototype.delCookie =(name) => {
   var exp = new Date();
   exp.setTime(exp.getTime() - 1);
-  var cval = this.getCookie(name);
+  var cval = Vue.prototype.getCookie(name);
   if (cval != null)
     document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
 };

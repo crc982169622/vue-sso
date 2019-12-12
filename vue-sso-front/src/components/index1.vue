@@ -1,5 +1,6 @@
 <template>
     <div id="index1">
+      <Button type="primary" style="margin-left: 24%;" @click="loginout">退出登录</Button>
       <h1>这是系统1的主页</h1>
       <h3>{{message}}</h3><br/>
       <router-link to="/index2"><a href="#">进入系统2的主页</a></router-link>
@@ -27,7 +28,13 @@
                 this.message = response.data.message
               }
             })
-        }
+        },
+      methods: {
+          loginout: function () {
+            this.delCookie("token")
+            this.$router.go(0);
+          }
+      }
     }
 </script>
 
