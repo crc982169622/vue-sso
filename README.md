@@ -12,4 +12,6 @@
         --- vue-sso-redis  redis共享服务
         --- vue-sso-server  sso登录服务
         
+（注意：本项目测试账号：admin  密码：11111111）
+        
         
