@@ -43,7 +43,11 @@
                   .then(response => {
                     if (response.data.stateInfo == 'success') {
                       this.setCookie("token", response.data.message, 1)
-                      this.$router.push({path: this.$route.query.redirect})
+                      if (this.$route.query.redirect == null) {
+                        this.$router.push({path: '/index1'})
+                      } else {
+                        this.$router.push({path: this.$route.query.redirect})
+                      }
                     } else {
                       this.$Message.error(response.data.message);
                     }
