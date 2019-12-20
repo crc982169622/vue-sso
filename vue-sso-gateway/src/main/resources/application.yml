@@ -13,5 +13,9 @@ spring:
         uri: http://localhost:8083
         predicates:
         - Path=/server2/**
+      - id: sso
+        uri: http://localhost:8081
+        predicates:
+        - Path=/sso/**
 
 hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 1000
