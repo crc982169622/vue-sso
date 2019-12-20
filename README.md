@@ -9,6 +9,7 @@
         --- vue-server2  后台服务2
         --- vue-sso-common  公共服务
         --- vue-sso-front  前端vue项目
+        --- vue-sso-gateway 网关服务
         --- vue-sso-redis  redis共享服务
         --- vue-sso-server  sso登录服务
         
