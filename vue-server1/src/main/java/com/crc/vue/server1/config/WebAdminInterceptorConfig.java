@@ -22,8 +22,8 @@ public class WebAdminInterceptorConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(webAdminInterceptor())
-                .addPathPatterns("/**")
-                .excludePathPatterns("/static");
+//        registry.addInterceptor(webAdminInterceptor())
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/static");
     }
 }

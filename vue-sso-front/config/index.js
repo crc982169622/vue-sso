@@ -19,14 +19,14 @@ module.exports = {
         }
       },
       '/server1': {
-        target: 'http://127.0.0.1:8082/server1', // API服务所在IP及端口号
+        target: 'http://127.0.0.1:8888/server1', // API服务所在IP及端口号
         changeOrigin: true, // 如果设置为true,那么本地会虚拟一个服务器接收你的请求并代你发送该请求，这样就不会有跨域问题（只适合开发环境）
         pathRewrite: {
           '^/server1': '' // 重写路径
         }
       },
       '/server2': {
-        target: 'http://127.0.0.1:8083/server2', // API服务所在IP及端口号
+        target: 'http://127.0.0.1:8888/server2', // API服务所在IP及端口号
         changeOrigin: true, // 如果设置为true,那么本地会虚拟一个服务器接收你的请求并代你发送该请求，这样就不会有跨域问题（只适合开发环境）
         pathRewrite: {
           '^/server2': '' // 重写路径
