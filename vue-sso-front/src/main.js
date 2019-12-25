@@ -50,10 +50,20 @@ Vue.prototype.getUrlKey=function(name) {
 // http response 拦截器
 axios.interceptors.response.use(
   response => {
+    if (response) {
+      debugger;
+      if (response.data.code == 401) {
+        router.replace({
+          path: '/',
+          query: {redirect: router.currentRoute.fullPath}
+        })
+      }
+    }
     return response;
   },
   error => {
     if (error.response) {
+      debugger;
       if (error.response.status == 401) {
         router.replace({
           path: '/',
